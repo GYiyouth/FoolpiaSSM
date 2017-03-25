@@ -3,18 +3,5 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="test1" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="persistence.mybatis.interfaces.Test1" />
-        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
-    </bean>
 
-    <bean id="testTest" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="persistence.mybatis.interfaces.TestTest"/>
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-    </bean>
-
-    <bean id="test2" class="persistence.mybatis.interfaces.Test2">
-        <property name="test1" ref="test1"/>
-        <property name="testTest" ref="testTest"/>
-    </bean>
 </beans>

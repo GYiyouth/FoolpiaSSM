@@ -1,4 +1,6 @@
-import persistence.mybatis.interfaces.Test2;
+import model.com.pojo.domain.DAO.UserDAO;
+import model.com.pojo.domain.businessObject.User.UserLogInBO;
+import model.com.pojo.domain.valueObject.UserVO;
 import tool.com.BeanFactory;
 
 /**
@@ -6,8 +8,16 @@ import tool.com.BeanFactory;
  */
 public class Test {
     public static void main(String[] args) {
-        Test2 test2 = BeanFactory.getBean("test2", Test2.class);
-        System.out.println(test2.getTest1().select1());
-        System.out.println(test2.getTestTest().select1());
+//        UserDAO userDAO = BeanFactory.getBean("userDAO", UserDAO.class);
+//        UserVO userVO = userDAO.getNormalUserVOByLogIn("888", "666");
+//        System.out.println(userVO);
+//        userVO.setUserName("aaa");
+//        userVO.setName("葛尧");
+//        userVO.setId(null);
+//        userVO = userDAO.saveNormalUserVO(userVO);
+//        System.out.println(userVO);
+
+        UserLogInBO userLogInBO = BeanFactory.getBean("userLogInBO", UserLogInBO.class);
+        userLogInBO.normalUserLogIn("666", "666");
     }
 }

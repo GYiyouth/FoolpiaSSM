@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="SSMTemplate:war exploded">
-    <output-path>$PROJECT_DIR$/target/SSMTemplate</output-path>
+  <artifact type="exploded-war" name="FoolpiaSSM:war exploded">
+    <output-path>$PROJECT_DIR$/target/FoolpiaSSM</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -68,7 +68,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/SSMTemplate/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/FoolpiaSSM/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="FoolpiaSSM/web/Web" />
     </root>

@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="FoolpiaSSM" />
         <module name="SSMTemplate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="FoolpiaSSM" target="1.8" />
       <module name="SSMTemplate" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>Ge Yao</groupId>
-  <artifactId>SSMTemplate</artifactId>
+  <artifactId>FoolpiaSSM</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>SSMTemplate Maven Webapp</name>
+  <name>FoolpiaSSM Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -346,29 +346,43 @@
 
 
   </dependencies>
+
+
+
   <build>
-    <finalName>SSMTemplate</finalName>
+    <finalName>FoolpiaSSM</finalName>
 
-    <!--<plugins>-->
-    <!--<plugin>-->
+      <!--强制将xml文件打包-->
+      <resources>
+          <resource>
+              <directory>src/main/java</directory>
+              <includes>
+                  <include>**/*.xml</include>
+              </includes>
+              <filtering>false</filtering>
+          </resource>
+      </resources>
 
-    <!--<groupId>org.apache.tomcat.maven</groupId>-->
-    <!--<artifactId>tomcat7-maven-plugin</artifactId>-->
-    <!--<version>2.2</version>-->
-    <!--<configuration>-->
+    <plugins>
+    <plugin>
 
-    <!--<url>http://localhost:8080/manager/text</url>-->
-    <!--<server>tomcat7</server>-->
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat7-maven-plugin</artifactId>
+    <version>2.2</version>
+    <configuration>
+
+            <url>http:// 128.199.76.177:8080/manager/text</url>
+            <server>tomcat7</server>
     <!--下面这俩是根据你的tomcat配置决定的,仅当你需要远程部署时使用-->
-    <!--<username></username>-->
-    <!--<password></password>-->
-    <!--<update>true</update>-->
-    <!--<path>/</path>-->
+            <username></username>
+            <password></password>
+            <update>true</update>
+            <path>/foolpiaSSM</path>
 
-    <!--</configuration>-->
+    </configuration>
 
-    <!--</plugin>-->
-    <!--</plugins>-->
+    </plugin>
+    </plugins>
 
   </build>
 </project>

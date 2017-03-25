@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SSMTemplate.iml" filepath="$PROJECT_DIR$/SSMTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoolpiaSSM.iml" filepath="$PROJECT_DIR$/FoolpiaSSM.iml" />
     </modules>
   </component>
 </project>

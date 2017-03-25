@@ -4,6 +4,7 @@ import net.sf.json.JSONObject;
 import org.hibernate.SessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -26,7 +27,8 @@ public class BeanFactory {
     public static SqlSessionFactoryBean getSessionFactory(){
         return getApplicationContext().getBean("sqlSessionFactory", SqlSessionFactoryBean.class);
     }
-    public static JSONObject getJSONO(){
+
+    public static JSONObject getJSON(){
         return getBean("jsonObject", JSONObject.class);
     }
 }

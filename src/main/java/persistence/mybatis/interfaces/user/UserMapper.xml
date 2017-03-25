@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="persistence.mybatis.interfaces.user.UserMapper">
+
+    <sql id="userTableName">
+        user
+    </sql>
+
+    <sql id="userTableColumns">
+        (name, sex, birthday, title,description,phoneNumber,
+        email, homePage,  balance, totalCost, school, enterprise,
+         location, photoPath, userName, passWord, lastLogIn,state)
+    </sql>
+    <sql id="userTableProperties">
+        (#{name}, #{sex}, #{birthday}, #{title},#{description},#{phoneNumber},
+        #{email}, #{homePage},  #{balance}, #{totalCost}, #{school}, #{enterprise},
+        #{location}, #{photoPath}, #{userName}, #{passWord}, #{lastLogIn},#{state})
+    </sql>
+
+    <sql id="logInCheckCondition">
+        WHERE username = #{userName} AND passWord = #{passWord}
+    </sql>
+
+
+    <select id="getUserVOByLogIn" parameterType="String" resultMap="userBaseMap">
+        SELECT * FROM <include refid="userTableName"/>
+        <include refid="logInCheckCondition"/>
+    </select>
+
+    <insert id="saveUserVO" parameterType="userVO" useGeneratedKeys="true"
+            keyProperty="id">
+        insert into <include refid="userTableName"/>
+        <include refid="userTableColumns"/>
+         values
+        <include refid="userTableProperties"/>;
+    </insert>
+    
+    
+    <resultMap id="userBaseMap" type="userVO">
+        <id property="id" column="id"/>
+    </resultMap>
+</mapper>
